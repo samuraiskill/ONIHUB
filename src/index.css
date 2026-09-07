@@ -1,0 +1,123 @@
+@import "tailwindcss";
+
+@layer utilities {
+  /* KasA Dojo Depth Effects & Elder Japanese Aesthetics */
+  .bg-kasa-dojo {
+    background-color: #090807;
+    background-image: 
+      radial-gradient(circle at 50% 0%, rgba(217, 119, 6, 0.08) 0%, transparent 75%),
+      linear-gradient(to bottom, rgba(18, 14, 10, 0.95), rgba(6, 5, 4, 0.98));
+  }
+
+  .bg-kasa-card {
+    background: linear-gradient(145deg, #120e0a 0%, #0a0806 100%);
+    border: 1px solid rgba(217, 119, 6, 0.2);
+    box-shadow: 0 10px 30px -5px rgba(0, 0, 0, 0.8), inset 0 1px 0 rgba(255, 255, 255, 0.05);
+  }
+
+  .bg-kasa-scroll {
+    background: linear-gradient(180deg, #18120c 0%, #0d0906 100%);
+    border: 1px solid rgba(180, 83, 9, 0.3);
+  }
+
+  .shadow-dojo-depth {
+    box-shadow: 
+      0 20px 50px -10px rgba(0, 0, 0, 0.95),
+      0 0 20px rgba(217, 119, 6, 0.15),
+      inset 0 1px 1px rgba(255, 255, 255, 0.08);
+  }
+
+  .text-gold-accent {
+    color: #f59e0b;
+  }
+
+  .border-gold-accent {
+    border-color: rgba(217, 119, 6, 0.4);
+  }
+
+  /* Continuous Shimmer Animation for App Icons and Badges */
+  @keyframes shimmer-shine {
+    0% {
+      background-position: -200% 0;
+    }
+    100% {
+      background-position: 200% 0;
+    }
+  }
+
+  @keyframes pulse-glow-red {
+    0%, 100% {
+      box-shadow: 0 0 15px rgba(239, 68, 68, 0.4), inset 0 0 10px rgba(239, 68, 68, 0.2);
+    }
+    50% {
+      box-shadow: 0 0 30px rgba(239, 68, 68, 0.8), inset 0 0 20px rgba(239, 68, 68, 0.4);
+    }
+  }
+
+  @keyframes pulse-glow-green {
+    0%, 100% {
+      box-shadow: 0 0 15px rgba(34, 197, 94, 0.3), inset 0 0 10px rgba(34, 197, 94, 0.2);
+    }
+    50% {
+      box-shadow: 0 0 25px rgba(34, 197, 94, 0.7), inset 0 0 15px rgba(34, 197, 94, 0.4);
+    }
+  }
+
+  .animate-shimmer {
+    background: linear-gradient(
+      110deg,
+      rgba(217, 119, 6, 0.15) 0%,
+      rgba(255, 255, 255, 0.85) 50%,
+      rgba(217, 119, 6, 0.15) 100%
+    );
+    background-size: 200% 100%;
+    animation: shimmer-shine 3s infinite linear;
+  }
+
+  .shimmer-icon-wrapper {
+    position: relative;
+    overflow: hidden;
+  }
+
+  .shimmer-icon-wrapper::after {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(
+      60deg,
+      transparent 30%,
+      rgba(255, 255, 255, 0.4) 50%,
+      transparent 70%
+    );
+    transform: rotate(30deg);
+    animation: shimmer-shine 2.5s infinite ease-in-out;
+  }
+
+  .glow-red {
+    animation: pulse-glow-red 3s infinite;
+  }
+
+  .glow-green {
+    animation: pulse-glow-green 3s infinite;
+  }
+
+  /* Custom Clean Scrollbars */
+  ::-webkit-scrollbar {
+    width: 7px;
+    height: 7px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #090807;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #2a2018;
+    border-radius: 4px;
+    border: 1px solid rgba(217, 119, 6, 0.2);
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: #d97706;
+  }
+}

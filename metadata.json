@@ -1,0 +1,6 @@
+{
+  "name": "KasA Dojo Kiosk",
+  "description": "Elder Japanese KasA Dojo Kiosk featuring an expanded request sanctuary, encrypted proxy browser, AI Citadel room, active Torii firewall IDS, and biometric airlock lockdown.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
